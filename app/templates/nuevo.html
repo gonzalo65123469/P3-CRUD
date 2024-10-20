@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro en Seminarios</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro en Seminarios</h1>
+        <!-- Imagen en la esquina superior -->
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+        <form action="/" method="POST">
+            <!-- Campo de fecha -->
+            <div class="form-section">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+
+            <!-- Campo de nombre -->
+            <div class="form-section">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <!-- Campo de apellidos -->
+            <div class="form-section">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+            </div>
+
+            <!-- Selección de turno -->
+            <div class="form-section">
+                <label>Turno:</label>
+                <input type="radio" id="mañana" name="turno" value="Mañana" required>
+                <label for="mañana">Mañana</label>
+                <input type="radio" id="tarde" name="turno" value="Tarde" required>
+                <label for="tarde">Tarde</label>
+                <input type="radio" id="noche" name="turno" value="Noche" required>
+                <label for="noche">Noche</label>
+            </div>
+
+            <!-- Seminarios con imágenes -->
+            <div class="form-section">
+                <label>Seminarios Disponibles:</label>
+                <div class="seminar-option">
+                    <input type="checkbox" name="seminarios" value="Inteligencia Artificial"> 
+                    <label>Inteligencia Artificial</label>
+                    <img src="{{ url_for('static', filename='images/ai.png') }}" class="seminar-image">
+                </div>
+                <div class="seminar-option">
+                    <input type="checkbox" name="seminarios" value="Machine Learning"> 
+                    <label>Machine Learning</label>
+                    <img src="{{ url_for('static', filename='images/ml.png') }}" class="seminar-image">
+                </div>
+                <div class="seminar-option">
+                    <input type="checkbox" name="seminarios" value="Simulación con Arena"> 
+                    <label>Simulación con Arena</label>
+                    <img src="{{ url_for('static', filename='images/simulation.png') }}" class="seminar-image">
+                </div>
+                <div class="seminar-option">
+                    <input type="checkbox" name="seminarios" value="Robótica Educativa"> 
+                    <label>Robótica Educativa</label>
+                    <img src="{{ url_for('static', filename='images/robotics.png') }}" class="seminar-image">
+                </div>
+            </div>
+
+            <!-- Botón de envío -->
+            <input type="submit" value="Enviar Registro">
+        </form>
+    </div>
+</body>
+</html>

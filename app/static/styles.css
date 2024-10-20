@@ -1,0 +1,142 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Cambiar la tipografía */
+    background-color: #81d8e4; /* Color de fondo más suave */
+    margin: 0; /* Eliminar márgenes del body */
+    padding: 20px; /* Agregar espacio alrededor de la página */
+}
+
+.container {
+    width: 80%;
+    max-width: 800px; /* Limitar el ancho máximo */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2897b9;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra más suave */
+    border-radius: 10px;
+    border: 1px solid #e0e0e0; /* Borde sutil */
+}
+
+h1 {
+    text-align: center;
+    color: #fffffff8; /* Cambiar color del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.logo {
+    display: block; /* Para centrar el logo */
+    margin: 20px auto 20px; /* Centramos el logo */
+    width: 100px; /* Ajustar el tamaño del logo */
+    height: 100px;
+    border-radius: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section {
+    display: inline-block; /* Mantener los seminarios en línea */
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #31eee4; /* Color de fondo de los seminarios */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+input[type="text"], input[type="date"], select {
+    padding: 12px;
+    border-radius: 20px; /* Bordes más redondeados */
+    border: 1px solid #00796b; /* Cambiar el color del borde */
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s; /* Efecto de transición */
+}
+
+input[type="submit"] {
+    background-color: #00796b; /* Color de fondo del botón */
+    color: white;
+    cursor: pointer;
+    border: none; /* Eliminar el borde del botón */
+    padding: 12px; /* Agregar padding para más espacio */
+    border-radius: 15px; /* Bordes más redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+    transition: all 0.3s; /* Efecto de transición */
+    margin-top: 20px; /* Espacio superior */
+}
+
+input[type="submit"]:hover {
+    background-color: #009688; /* Color al pasar el mouse */
+    transform: translateY(-4px) scale(1.05); /* Efecto de elevación y aumento al pasar el mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Aumentar sombra al pasar el mouse */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 3px solid #033834;
+    padding: 5px;
+    text-align: left;
+}
+
+thead {
+    background-color: #00796b;
+    color: white;
+}
+
+img {
+    width: 70px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 60px; /* Mantiene la relación de aspecto */
+    border-radius: 25px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave para la imagen */
+    transition: transform 0.3s; /* Efecto de transición para el hover */
+    
+}
+
+img:hover {
+    transform: scale(1.05); /* Aumenta la imagen ligeramente al pasar el mouse */
+    
+}
+
+a {
+    color: #00796b; /* Cambiar color de los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+a:hover {
+    text-decoration: underline;
+    
+}
+
+.btn-nuevo, .btn-editar, .btn-eliminar {
+    background-color: #00796b; /* Color de fondo para los botones */
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 20px;
+    margin: 5px 0; /* Espacio entre botones */
+    transition: all 0.3s;
+}
+
+.btn-editar {
+    background-color: #388e3c; /* Verde para el botón de editar */
+}
+
+.btn-editar:hover {
+    background-color: #43a047; /* Verde más claro al pasar el mouse */
+}
+
+.btn-eliminar {
+    background-color: #d32f2f; /* Rojo para el botón de eliminar */
+}
+
+.btn-eliminar:hover {
+    background-color: #e53935; /* Rojo más claro al pasar el mouse */
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Inscrito</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Editar Inscrito</h1>
+        <form action="{{ url_for('editar', index=index) }}" method="POST">
+            <div class="form-section">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" value="{{ inscrito['fecha'] }}" required>
+            </div>
+
+            <div class="form-section">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" value="{{ inscrito['nombre'] }}" required>
+            </div>
+
+            <div class="form-section">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" value="{{ inscrito['apellidos'] }}" required>
+            </div>
+
+            <div class="form-section">
+                <label>Turno:</label>
+                <input type="radio" id="mañana" name="turno" value="Mañana" {% if inscrito['turno'] == 'Mañana' %}checked{% endif %}>
+                <label for="mañana">Mañana</label>
+                <input type="radio" id="tarde" name="turno" value="Tarde" {% if inscrito['turno'] == 'Tarde' %}checked{% endif %}>
+                <label for="tarde">Tarde</label>
+                <input type="radio" id="noche" name="turno" value="Noche" {% if inscrito['turno'] == 'Noche' %}checked{% endif %}>
+                <label for="noche">Noche</label>
+            </div>
+
+            <div class="form-section">
+                <label>Seminarios Disponibles:</label>
+                <input type="checkbox" name="seminarios" value="Inteligencia Artificial" {% if 'Inteligencia Artificial' in inscrito['seminarios'] %}checked{% endif %}> Inteligencia Artificial<br>
+                <input type="checkbox" name="seminarios" value="Machine Learning" {% if 'Machine Learning' in inscrito['seminarios'] %}checked{% endif %}> Machine Learning<br>
+                <input type="checkbox" name="seminarios" value="Simulación con Arena" {% if 'Simulación con Arena' in inscrito['seminarios'] %}checked{% endif %}> Simulación con Arena<br>
+                <input type="checkbox" name="seminarios" value="Robótica Educativa" {% if 'Robótica Educativa' in inscrito['seminarios'] %}checked{% endif %}> Robótica Educativa<br>
+            </div>
+
+            <div class="form-section">
+                <input type="submit" value="Guardar Cambios">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
